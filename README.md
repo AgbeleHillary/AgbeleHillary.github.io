@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Launching Soon | Modern Coming Soon Page</title>
+    <title>Hillary Agbele | Coming Soon</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,15 +14,16 @@
         }
         
         body {
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            background: linear-gradient(135deg, #0a192f, #112240, #233554);
             background-size: 400% 400%;
             animation: gradientBG 15s ease infinite;
-            color: white;
+            color: #e6f1ff;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             overflow-x: hidden;
+            padding: 20px;
         }
         
         @keyframes gradientBG {
@@ -35,12 +36,13 @@
             max-width: 800px;
             width: 90%;
             text-align: center;
-            padding: 40px 20px;
-            background: rgba(0, 0, 0, 0.6);
+            padding: 50px 30px;
+            background: rgba(13, 25, 48, 0.8);
             backdrop-filter: blur(10px);
             border-radius: 20px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
             animation: fadeIn 1s ease-out;
+            border: 1px solid rgba(100, 255, 218, 0.2);
         }
         
         @keyframes fadeIn {
@@ -51,7 +53,7 @@
         .logo {
             font-size: 3.5rem;
             margin-bottom: 20px;
-            color: #fdbb2d;
+            color: #64ffda;
             animation: pulse 2s infinite;
         }
         
@@ -65,12 +67,21 @@
             font-size: 3rem;
             margin-bottom: 15px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #ccd6f6;
+        }
+        
+        .name-highlight {
+            color: #64ffda;
+            font-weight: bold;
+            display: block;
+            font-size: 3.5rem;
+            margin-top: 10px;
         }
         
         .tagline {
             font-size: 1.5rem;
             margin-bottom: 30px;
-            color: #f8f8f8;
+            color: #a8b2d1;
         }
         
         .description {
@@ -80,6 +91,7 @@
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+            color: #8892b0;
         }
         
         .countdown {
@@ -91,23 +103,26 @@
         }
         
         .countdown-item {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(100, 255, 218, 0.1);
             padding: 20px;
             border-radius: 10px;
             min-width: 100px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(100, 255, 218, 0.2);
         }
         
         .countdown-number {
             font-size: 2.5rem;
             font-weight: bold;
             margin-bottom: 5px;
+            color: #64ffda;
         }
         
         .countdown-label {
             font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 1px;
+            color: #ccd6f6;
         }
         
         .signup-form {
@@ -123,14 +138,20 @@
             border: none;
             border-radius: 50px;
             font-size: 1.1rem;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(136, 146, 176, 0.2);
+            color: #e6f1ff;
             transition: all 0.3s ease;
+        }
+        
+        .form-input::placeholder {
+            color: #a8b2d1;
         }
         
         .form-input:focus {
             outline: none;
-            box-shadow: 0 0 0 3px rgba(253, 187, 45, 0.8);
+            box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.5);
             transform: scale(1.02);
+            background: rgba(136, 146, 176, 0.3);
         }
         
         .submit-btn {
@@ -139,15 +160,15 @@
             border-radius: 50px;
             font-size: 1.1rem;
             font-weight: bold;
-            background: #fdbb2d;
-            color: #1a2a6c;
+            background: #64ffda;
+            color: #0a192f;
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
         .submit-btn:hover {
-            background: #ffcc44;
+            background: #88ffdf;
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
@@ -170,22 +191,23 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
+            background: rgba(136, 146, 176, 0.1);
+            color: #64ffda;
             font-size: 1.5rem;
             transition: all 0.3s ease;
             text-decoration: none;
+            border: 1px solid rgba(100, 255, 218, 0.2);
         }
         
         .social-icon:hover {
-            background: #fdbb2d;
-            color: #1a2a6c;
+            background: #64ffda;
+            color: #0a192f;
             transform: translateY(-5px);
         }
         
         .footer {
             margin-top: 30px;
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(136, 146, 176, 0.7);
         }
         
         .footer-links {
@@ -193,13 +215,13 @@
         }
         
         .footer a {
-            color: #fdbb2d;
+            color: #64ffda;
             text-decoration: none;
             transition: color 0.3s ease;
         }
         
         .footer a:hover {
-            color: #ffcc44;
+            color: #88ffdf;
             text-decoration: underline;
         }
         
@@ -208,13 +230,14 @@
             top: 20px;
             right: 20px;
             padding: 15px 25px;
-            background: #4CAF50;
-            color: white;
+            background: #64ffda;
+            color: #0a192f;
             border-radius: 5px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             transform: translateX(150%);
             transition: transform 0.5s ease;
             z-index: 1000;
+            font-weight: bold;
         }
         
         .notification.show {
@@ -225,6 +248,10 @@
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
+            }
+            
+            .name-highlight {
+                font-size: 2.8rem;
             }
             
             .tagline {
@@ -254,6 +281,10 @@
                 font-size: 2rem;
             }
             
+            .name-highlight {
+                font-size: 2.2rem;
+            }
+            
             .tagline {
                 font-size: 1rem;
             }
@@ -276,14 +307,14 @@
 <body>
     <div class="container">
         <div class="logo">
-            <i class="fas fa-rocket"></i>
+            <i class="fas fa-code"></i>
         </div>
         
-        <h1>Something Amazing Is Coming</h1>
+        <h1>Coming Soon<span class="name-highlight">Hillary Agbele</span></h1>
         
-        <p class="tagline">We're working hard to bring you an incredible experience.</p>
+        <p class="tagline">Creating digital experiences that make an impact</p>
         
-        <p class="description">Join our mailing list to be the first to know when we launch. We promise to only send you important updates and never spam your inbox.</p>
+        <p class="description">I'm working on something amazing! Join my mailing list to be the first to know when I launch. Get updates on my latest projects and insights.</p>
         
         <div class="countdown">
             <div class="countdown-item">
@@ -314,7 +345,7 @@
                 <i class="fab fa-twitter"></i>
             </a>
             <a href="#" class="social-icon">
-                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin-in"></i>
             </a>
             <a href="#" class="social-icon">
                 <i class="fab fa-github"></i>
@@ -326,16 +357,16 @@
         
         <footer class="footer">
             <div class="footer-links">
-                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact</a>
             </div>
             <div>
-                &copy; 2023 Your Company. Credits: <a href="http://html5up.net">HTML5 UP</a>
+                &copy; 2023 Hillary Agbele. All rights reserved.
             </div>
         </footer>
     </div>
     
     <div class="notification" id="notification">
-        Thank you for subscribing! We'll notify you when we launch.
+        Thank you for subscribing! I'll notify you when I launch.
     </div>
     
     <script>
