@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hillary Agbele | Coming Soon</title>
+    <title>Hillary Agbele | About Me</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -32,7 +32,7 @@
         }
         
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             width: 90%;
             text-align: center;
             padding: 50px 30px;
@@ -87,93 +87,70 @@
             font-size: 1.2rem;
             line-height: 1.6;
             margin-bottom: 40px;
-            max-width: 600px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
             color: #8892b0;
+            text-align: left;
         }
         
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             margin-bottom: 40px;
-            flex-wrap: wrap;
+            text-align: left;
         }
         
-        .countdown-item {
+        .info-card {
             background: rgba(100, 255, 218, 0.1);
-            padding: 20px;
+            padding: 25px;
             border-radius: 10px;
-            min-width: 100px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             border: 1px solid rgba(100, 255, 218, 0.2);
         }
         
-        .countdown-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 5px;
+        .info-card h3 {
+            color: #64ffda;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-card p {
+            color: #a8b2d1;
+            line-height: 1.6;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .skill {
+            background: rgba(100, 255, 218, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
             color: #64ffda;
         }
         
-        .countdown-label {
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #ccd6f6;
+        .courses {
+            list-style-type: none;
         }
         
-        .signup-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            max-width: 500px;
-            margin: 0 auto 40px;
-        }
-        
-        .form-input {
-            padding: 15px 20px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            background: rgba(136, 146, 176, 0.2);
-            color: #e6f1ff;
-            transition: all 0.3s ease;
-        }
-        
-        .form-input::placeholder {
+        .courses li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(100, 255, 218, 0.1);
             color: #a8b2d1;
         }
         
-        .form-input:focus {
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.5);
-            transform: scale(1.02);
-            background: rgba(136, 146, 176, 0.3);
-        }
-        
-        .submit-btn {
-            padding: 15px 20px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            background: #64ffda;
-            color: #0a192f;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .submit-btn:hover {
-            background: #88ffdf;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        .submit-btn:active {
-            transform: translateY(0);
+        .courses li:last-child {
+            border-bottom: none;
         }
         
         .social-icons {
@@ -224,25 +201,6 @@
             text-decoration: underline;
         }
         
-        .notification {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 15px 25px;
-            background: #64ffda;
-            color: #0a192f;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transform: translateX(150%);
-            transition: transform 0.5s ease;
-            z-index: 1000;
-            font-weight: bold;
-        }
-        
-        .notification.show {
-            transform: translateX(0);
-        }
-        
         /* Responsive design */
         @media (max-width: 768px) {
             h1 {
@@ -257,17 +215,8 @@
                 font-size: 1.2rem;
             }
             
-            .countdown {
-                gap: 10px;
-            }
-            
-            .countdown-item {
-                min-width: 80px;
-                padding: 15px;
-            }
-            
-            .countdown-number {
-                font-size: 2rem;
+            .info-grid {
+                grid-template-columns: 1fr;
             }
         }
         
@@ -287,67 +236,64 @@
             .tagline {
                 font-size: 1rem;
             }
-            
-            .countdown-item {
-                min-width: 70px;
-                padding: 10px;
-            }
-            
-            .countdown-number {
-                font-size: 1.5rem;
-            }
-            
-            .countdown-label {
-                font-size: 0.8rem;
-            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="logo">
-            <i class="fas fa-code"></i>
+            <i class="fas fa-laptop-code"></i>
         </div>
         
-        <h1>Coming Soon<span class="name-highlight">Hillary Agbele</span></h1>
+        <h1>About <span class="name-highlight">Hillary Agbele</span></h1>
         
-        <p class="tagline">Creating digital experiences that make an impact</p>
+        <p class="tagline">Computer Science Major | Class of 2026</p>
         
-        <p class="description">I'm working on something amazing! Join my mailing list to be the first to know when I launch. Get updates on my latest projects and insights.</p>
-        
-        <div class="countdown">
-            <div class="countdown-item">
-                <div class="countdown-number" id="days">00</div>
-                <div class="countdown-label">Days</div>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                <p>I'm currently pursuing a Bachelor's degree in Computer Science, expecting to graduate in 2026. This website is part of a project for one of my classes where I'm learning web development and design principles.</p>
             </div>
-            <div class="countdown-item">
-                <div class="countdown-number" id="hours">00</div>
-                <div class="countdown-label">Hours</div>
+            
+            <div class="info-card">
+                <h3><i class="fas fa-map-marker-alt"></i> Background</h3>
+                <p>I'm originally from West Africa, which has given me a unique perspective on technology's role in solving real-world problems. I'm passionate about using technology to create positive change in communities.</p>
             </div>
-            <div class="countdown-item">
-                <div class="countdown-number" id="minutes">00</div>
-                <div class="countdown-label">Minutes</div>
+            
+            <div class="info-card">
+                <h3><i class="fas fa-code"></i> Skills</h3>
+                <p>As a computer science student, I'm developing skills in various programming languages and technologies:</p>
+                <div class="skills">
+                    <span class="skill">Java</span>
+                    <span class="skill">Python</span>
+                    <span class="skill">HTML/CSS</span>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">SQL</span>
+                    <span class="skill">Git</span>
+                </div>
             </div>
-            <div class="countdown-item">
-                <div class="countdown-number" id="seconds">00</div>
-                <div class="countdown-label">Seconds</div>
+            
+            <div class="info-card">
+                <h3><i class="fas fa-book"></i> Relevant Courses</h3>
+                <ul class="courses">
+                    <li>Data Structures and Algorithms</li>
+                    <li>Web Development</li>
+                    <li>Database Systems</li>
+                    <li>Software Engineering</li>
+                    <li>Computer Networks</li>
+                </ul>
             </div>
         </div>
-        
-        <form class="signup-form" id="signup-form">
-            <input type="email" class="form-input" id="email" placeholder="Your Email Address" required>
-            <button type="submit" class="submit-btn">Notify Me on Launch</button>
-        </form>
         
         <div class="social-icons">
-            <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-            </a>
             <a href="#" class="social-icon">
                 <i class="fab fa-linkedin-in"></i>
             </a>
             <a href="#" class="social-icon">
                 <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
             </a>
             <a href="#" class="social-icon">
                 <i class="fas fa-envelope"></i>
@@ -356,78 +302,12 @@
         
         <footer class="footer">
             <div class="footer-links">
-                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact</a>
+                <a href="#">Resume</a> | <a href="#">Projects</a> | <a href="#">Contact</a>
             </div>
             <div>
-                &copy; 2023 Hillary Agbele. All rights reserved.
+                &copy; 2023 Hillary Agbele. This is a class project.
             </div>
         </footer>
     </div>
-    
-    <div class="notification" id="notification">
-        Thank you for subscribing! I'll notify you when I launch.
-    </div>
-    
-    <script>
-        // Set launch date (2 months from now)
-        const launchDate = new Date();
-        launchDate.setMonth(launchDate.getMonth() + 2);
-        
-        // Countdown timer
-        function updateCountdown() {
-            const now = new Date();
-            const diff = launchDate - now;
-            
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-            
-            document.getElementById('days').textContent = days.toString().padStart(2, '0');
-            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-        }
-        
-        // Initial call
-        updateCountdown();
-        
-        // Update every second
-        setInterval(updateCountdown, 1000);
-        
-        // Form submission
-        document.getElementById('signup-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const email = document.getElementById('email').value;
-            
-            // Simple validation
-            if (!validateEmail(email)) {
-                alert('Please enter a valid email address.');
-                return;
-            }
-            
-            // Show notification
-            const notification = document.getElementById('notification');
-            notification.classList.add('show');
-            
-            // Hide notification after 3 seconds
-            setTimeout(() => {
-                notification.classList.remove('show');
-            }, 3000);
-            
-            // Reset form
-            this.reset();
-            
-            // In a real application, you would send the email to your server here
-            console.log('Email submitted:', email);
-        });
-        
-        // Email validation
-        function validateEmail(email) {
-            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return re.test(email);
-        }
-    </script>
 </body>
 </html>
